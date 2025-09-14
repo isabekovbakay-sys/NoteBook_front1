@@ -1,4 +1,4 @@
-const BASE_URL = "https://YOUR-BACKEND-URL.onrender.com/api";
+const BASE_URL = "https://notebook-nihh.onrender.com/api";
 
 // api_adapter.js - lightweight adapter to replace Firebase in this project
 // Provides: API.loadFilesFromServer(), API.uploadFileToServer(file, name),
