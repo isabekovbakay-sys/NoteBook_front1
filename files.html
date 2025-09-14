@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Файлы — Онлайн-кабинет</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.120/pdf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><button class="menu-toggle" aria-label="Меню">☰</button><h1>Файлы</h1></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="diary.html">Дневник</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="profile.html">Профиль</a>
+      <a href="admin.html">Админ</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" placeholder="Поиск: название, тема, глава, теги..." />
+      <select id="filterType">
+        <option value="">Все типы</option>
+        <option value="pdf">PDF</option>
+        <option value="image">Изображения</option>
+        <option value="text">Текст</option>
+        <option value="other">Другое</option>
+      </select>
+      <button id="refreshBtn">Обновить</button>
+    </section>
+
+    <section id="list" class="list"></section>
+  </main>
+
+  <div id="viewerModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn">×</button>
+      <div id="viewerBody" class="viewer-body"></div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script type="module" src="app.js"></script>
+<script src="/api_adapter.js"></script>
+<script src="/js/animations_init.js"></script>
+</body>
+</html>

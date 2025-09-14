@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Расписание — Онлайн-кабинет</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><button class="menu-toggle" aria-label="Меню">☰</button><h1>Расписание</h1></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="files.html">Файлы</a>
+      <a href="diary.html">Дневник</a>
+      <a href="profile.html">Профиль</a>
+      <a href="admin.html">Админ</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="schedule-panel">
+      <h2>Твоё расписание</h2>
+
+      <div class="schedule-form">
+        <input id="eventTitle" placeholder="Название урока/события" />
+        <input id="eventDate" type="date" />
+        <input id="eventTime" type="time" />
+        <input id="eventTopic" placeholder="Тема/краткое описание" />
+        <input id="eventLink" placeholder="Ссылка на материал (опционально)" />
+        <button id="addEvent">Добавить</button>
+      </div>
+
+      <div id="eventsList" class="events-list"></div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script type="module" src="schedule.js"></script>
+<script src="/api_adapter.js"></script>
+<script src="/js/animations_init.js"></script>
+</body>
+</html>

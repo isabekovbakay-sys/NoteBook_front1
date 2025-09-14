@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Админ — Загрузка</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.120/pdf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><button class="menu-toggle" aria-label="Меню">☰</button><h1>Админ — загрузка файлов</h1></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="files.html">Файлы</a>
+      <a href="diary.html">Дневник</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="profile.html">Профиль</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="authSection" class="admin-panel">
+      <div id="authStatus">Подключение к Firebase...</div>
+      <button id="signInBtn">Войти через Google</button>
+      <button id="signOutBtn" style="display:none">Выйти</button>
+    </section>
+
+    <section id="uploader" class="admin-panel" style="display:none">
+      <label>Файл или ZIP (можно выбрать .zip для импорта):<br/><input id="fileInput" type="file" /></label>
+      <label>Название / Заголовок:<br/><input id="metaTitle" placeholder="Например: Лекция 1 — Алгебра" /></label>
+      <label>Тема:<br/><input id="metaTopic" placeholder="Алгебра" /></label>
+      <label>Глава:<br/><input id="metaChapter" placeholder="Глава 1" /></label>
+      <label>Теги (через запятую):<br/><input id="metaTags" placeholder="алгебра,линейные уравнения" /></label>
+      <label><input id="extractPdfText" type="checkbox" /> Извлечь текст из PDF (опционально)</label>
+      <button id="uploadBtn">Загрузить</button>
+      <div id="adminStatus" class="status"></div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script type="module" src="admin.js"></script>
+<script src="/api_adapter.js"></script>
+<script src="/js/animations_init.js"></script>
+</body>
+</html>

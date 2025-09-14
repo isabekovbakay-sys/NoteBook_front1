@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Дневник — Онлайн-кабинет</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><button class="menu-toggle" aria-label="Меню">☰</button><h1>Дневник</h1></div>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="files.html">Файлы</a>
+      <a href="schedule.html">Расписание</a>
+      <a href="profile.html">Профиль</a>
+      <a href="admin.html">Админ</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="diary-panel">
+      <h2>Мои заметки и задания</h2>
+
+      <div class="note-form">
+        <input id="noteTitle" placeholder="Заголовок заметки" />
+        <textarea id="noteInput" placeholder="Напиши заметку..."></textarea>
+        <label><input id="notePrivate" type="checkbox" /> Приватная заметка</label>
+        <button id="saveNote">Сохранить заметку</button>
+      </div>
+
+      <div id="notesList" class="notes-list"></div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script type="module" src="diary.js"></script>
+<script src="/api_adapter.js"></script>
+<script src="/js/animations_init.js"></script>
+</body>
+</html>
